@@ -3,19 +3,19 @@ import { FC, useState } from "react";
 
 const PREFIX = "https://phouse-misc.s3.amazonaws.com/beam-gifs/";
 
-const FILS = [
+const FILES = [
   "@Beam Demo.mov",
   "Airtable Demo.mov",
   "Cmd + G Demo.mov",
   "Focus Demo.mov",
-  "Inbox Demo.gif",
+  // "Inbox Demo.gif",
   "Inbox Demo.mov",
   "Linear Demo.mov",
   "Linear Select Demo.mov",
-  "Mentions.gif",
+  // "Mentions.gif",
   "Mentions.mov",
   "Notion Demo.mov",
-  "Threads Demo.gif",
+  // "Threads Demo.gif",
   "Threads Demo.mov",
   "Topics Demo.mov",
   "Wiki Demo.mov",
@@ -23,11 +23,11 @@ const FILS = [
 
 export default function Home() {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const selection = FILS[selectedIndex];
+  const selection = FILES[selectedIndex];
   return (
     <main className="flex w-full overflow-hidden p-24 gap-4 max-md:flex-col">
       <div className="flex-0">
-        {FILS.map((f, i) => (
+        {FILES.map((f, i) => (
           <div
             className={`${
               i === selectedIndex ? "text-blue-500" : ""
@@ -35,7 +35,7 @@ export default function Home() {
             key={f}
             onClick={() => setSelectedIndex(i)}
           >
-            {f}
+            {f.replace(".mov", "")}
           </div>
         ))}
       </div>
