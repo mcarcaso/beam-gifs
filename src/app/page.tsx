@@ -25,7 +25,7 @@ export default function Home() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const selection = FILS[selectedIndex];
   return (
-    <main className="flex w-full overflow-hidden p-24 gap-4">
+    <main className="flex w-full overflow-hidden p-24 gap-4 max-md:flex-col">
       <div className="flex-0">
         {FILS.map((f, i) => (
           <div
