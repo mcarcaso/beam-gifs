@@ -31,7 +31,7 @@ export default function Home() {
           <div
             className={`${
               i === selectedIndex ? "text-blue-500" : ""
-            } text-2xl font-bold mr-2 whitespace-nowrap`}
+            } text-2xl font-bold mr-2 whitespace-nowrap cursor-pointer`}
             key={f}
             onClick={() => setSelectedIndex(i)}
           >
